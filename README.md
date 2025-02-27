@@ -1,1 +1,1 @@
-Made for HackClub Boba Drops
+My personal website
