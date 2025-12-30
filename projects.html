@@ -17,6 +17,11 @@
             text-align: center;
         }
 
+        html {
+            overflow-y: scroll;
+        }
+
+
         .head {
             margin: auto;
             margin-top: 0.5vh;
@@ -41,6 +46,16 @@
                 rgba(0, 0, 180, 0.05) 0px 18px 18px -2.5px,
                 rgba(0, 0, 200, 0.04) 0px 28px 28px -3.2px;
         }
+        
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
 
         .hdrtxt {
             font-family: Kanit;
@@ -74,59 +89,119 @@
         }
 
         .box {
-            border-style: solid;
-            width: 20vw;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 2vh;
-            border-radius: 20px;
-            padding: 0.5vw;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1.2rem;
+            border-radius: 24px;
+            background-color: rgba(244, 244, 244, 0.35);
+            box-shadow:
+                inset 4px 4px 10px #bcbcbc6c,
+                inset -4px -4px 10px #ffffff6d;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .box img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .box-title {
+            font-family: "JetBrains Mono";
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .no-ui {
+            font-family: Kanit;
+            font-weight: 600;
+            text-align: center;
+            opacity: 0.6;
+        }
+
+        .neu {
+            margin: auto;
+            margin-top: 0.5vh;
+            margin-bottom: 1vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(244, 244, 244, 0.3);
+            box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
+            color: #4d4d4d;
+            font-size: 2vw;
+            padding: 2vh 1vw;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid rgb(206, 206, 206);
+        }
+
+        .neu:hover {
+            box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
+        }
+
+        .neu:focus {
+            outline: none;
+            box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
         }
     </style>
 </head>
 <body>
-    <div class="head">
-        <a href="index.html" class="txt item" style="color: white;">Home</a>
-        <a href="projects.html" class="txt item" style="color: white;">Projects</a>
-        <a href="https://github.com/ZeusyBoy98" target="_blank" class="txt item" style="color: white;">Github</a>
-        <a href="contact.html" class="txt item" style="color: white;">Contact</a>
+    <div class="neu" style="width: 50vw; border-radius: 5vw;">
+        <a href="index.html" class="txt item" style="color: black;">Home</a>
+        <a href="languages.html" class="txt item" style="color: black;">Languages</a>
+        <a href="projects.html" class="txt item" style="color: black;">Projects</a>
+        <a href="https://github.com/ZeusyBoy98" target="_blank" class="txt item" style="color: black;">Github</a>
+        <a href="contact.html" class="txt item" style="color: black;">Contact</a>
     </div>
 
-    <div class="box">
-        <a href="https://zeusyboy.com/sketchetch/" class="txt" target="_blank">Sketchetch</a>
-        <img src="img/Sketchetch.png">
-    </div>
-    <div class="box">
-        <a href="https://zeusyboy.com/rock-paper-scissors" class="txt" target="_blank">Rock Paper Scissors</a>
-        <img src="img/RPS.png">
-    </div>
-    <div class="box">
-        <a href="https://zeusyboy.com/sign-up-form" class="txt" target="_blank">Sign Up Form</a>
-        <img src="img/SignUp.png">
-    </div>
-    <div class="box">
-        <a href="https://zeusyboy.com/Library" class="txt" target="_blank">Library</a>
-        <img src="img/lib.png">
-    </div>
-    <div class="box">
-        <a href="https://zeusyboy.com/Tic-Tac-Toe" class="txt" target="_blank">Tic Tac Toe</a>
-        <div class="hdrtxt">Has No UI</div>
-    </div>
-    <div class="box">
-        <a href="https://flyright.zeusyboy.com/" class="txt" target="_blank">FlyRight</a>
-        <img src="img/FlyRight.png">
-    </div>
-    <div class="box">
-        <a href="https://physbox.zeusyboy.com" class="txt" target="_blank">Physbox</a>
-        <img src="img/physbox.png">
-    </div>
-    <div class="box">
-        <a href="https://wet-cement-studios.itch.io/the-one-and-only-cownut" class="txt" target="_blank">The One and Only CowNut</a>
-        <img src="img/cownut.png">
-    </div>
-    <div class="box">
-        <a href="https://zeusyboy.com/Panda-Clicker/" class="txt" target="_blank">Physbox</a>
-        <img src="img/panda-clicker.png">
+    <div class="tiles">
+        <a class="box" href="https://zeusyboy.com/sketchetch/" target="_blank">
+            <div class="box-title">Sketchetch</div>
+            <img src="img/Sketchetch.png">
+        </a>
+
+        <a class="box" href="https://zeusyboy.com/rock-paper-scissors" target="_blank">
+            <div class="box-title">Rock Paper Scissors</div>
+            <img src="img/RPS.png">
+        </a>
+
+        <a class="box" href="https://zeusyboy.com/sign-up-form" target="_blank">
+            <div class="box-title">Sign Up Form</div>
+            <img src="img/SignUp.png">
+        </a>
+
+        <a class="box" href="https://zeusyboy.com/Library" target="_blank">
+            <div class="box-title">Library</div>
+            <img src="img/lib.png">
+        </a>
+
+        <a class="box" href="https://zeusyboy.com/Tic-Tac-Toe" target="_blank">
+            <div class="box-title">Tic Tac Toe</div>
+            <div class="no-ui">Has no UI</div>
+        </a>
+
+        <a class="box" href="https://flyright.zeusyboy.com/" target="_blank">
+            <div class="box-title">FlyRight</div>
+            <img src="img/FlyRight.png">
+        </a>
+
+        <a class="box" href="https://physbox.zeusyboy.com" target="_blank">
+            <div class="box-title">Physbox</div>
+            <img src="img/physbox.png">
+        </a>
+
+        <a class="box" href="https://wet-cement-studios.itch.io/the-one-and-only-cownut" target="_blank">
+            <div class="box-title">The One and Only CowNut</div>
+            <img src="img/cownut.png">
+        </a>
+
+        <a class="box" href="https://zeusyboy.com/Panda-Clicker/" target="_blank">
+            <div class="box-title">Panda Clicker</div>
+            <img src="img/panda-clicker.png">
+        </a>
     </div>
 </body>
 </html>

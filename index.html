@@ -18,6 +18,11 @@
             text-align: center;
         }
 
+        html {
+            overflow-y: scroll;
+        }
+
+
         .head {
             margin: auto;
             margin-top: 0.5vh;
@@ -26,7 +31,7 @@
             align-items: center;
             justify-content: space-between;
             backdrop-filter: blur(20px);
-            background-color: rgba(69, 78, 255, 0.8);
+            background-color: rgba(69, 78, 255, 0.248);
             border-radius: 28px;
             padding: 1rem 2rem;
             max-width: 90%;
@@ -87,18 +92,45 @@
             margin-right: 2vw;
         }
 
+        .neu {
+            margin: auto;
+            margin-top: 0.5vh;
+            margin-bottom: 1vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50vw;
+            background-color: rgba(244, 244, 244, 0.3);
+            border-radius: 5vw;
+            box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
+            color: #4d4d4d;
+            font-size: 2vw;
+            padding: 2vh 1vw;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid rgb(206, 206, 206);
+        }
+
+        .neu:hover {
+            box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
+        }
+
+        .neu:focus {
+            outline: none;
+            box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
+        }
     </style>
 </head>
 <body>
-    <div class="head">
-        <a href="index.html" class="txt item" style="color: white;">Home</a>
-        <a href="projects.html" class="txt item" style="color: white;">Projects</a>
-        <a href="https://github.com/ZeusyBoy98" target="_blank" class="txt item" style="color: white;">Github</a>
-        <a href="contact.html" class="txt item" style="color: white;">Contact</a>
+    <div class="neu">
+        <a href="index.html" class="txt item" style="color: black;">Home</a>
+        <a href="languages.html" class="txt item" style="color: black;">Languages</a>
+        <a href="projects.html" class="txt item" style="color: black;">Projects</a>
+        <a href="https://github.com/ZeusyBoy98" target="_blank" class="txt item" style="color: black;">Github</a>
+        <a href="contact.html" class="txt item" style="color: black;">Contact</a>
     </div>
     <img class="jayimg" src="img/jay.png" width="300">
     <div class="hdrtxt">Hello, this is a website for the one and only </div>
     <div class="jay">Jay</div>
-    <div class="txt">Hi, I'm Jay and I enjoy programming in JavaScript and Python. <br> I live in Australia, and I found out about hack club in late 2024.</div>
+    <div class="txt">Hi, I'm Jay and Javascript is the best programming language. <br> I live in Australia, and I found out about hack club in late 2024.</div>
 </body>
 </html>
